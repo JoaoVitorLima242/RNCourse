@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text >Hello World!</Text>
+      <View>
+        <Text>Teste dois</Text>
+      </View>
+      <Text style={styles.dummyText}>Teste</Text>
+      <Button title='tap new!!!'/>
       <StatusBar style="auto" />
     </View>
   );
@@ -18,4 +21,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  dummyText: {
+    padding: 10,
+    borderWidth: 1, 
+    borderColor: 'red',
+    margin: 10
+  }
 });
