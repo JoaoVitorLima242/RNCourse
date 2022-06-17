@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Button, TextInput, View, StyleSheet, Modal} from "react-native";
+import { 
+  Button,
+  TextInput,
+  View,
+  StyleSheet,
+  Modal,
+  Image
+} from "react-native";
 
 function GoalInput ({onAddGoal, visible, onCancel}) {
     const [enteredGoalText, setEnteredGoalText] = useState('');
@@ -19,6 +26,7 @@ function GoalInput ({onAddGoal, visible, onCancel}) {
             animationType='slide'
         >
             <View style={styles.inputContainer}>
+                <Image style={styles.image} source={require('../assets/images/goal.png')}/>
                 <TextInput 
                     style={styles.TextInput} 
                     placeholder='Your course goal!' 
@@ -45,12 +53,15 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: 24,
-        borderBottomWidth: 1,
-        borderBottomColor: '#ccc',
-        padding: 16
+        padding: 16,
+        backgroundColor: '#311b6b'
     },
-    
+    image: {
+        width: 100,
+        height: 100,
+        margin: 20
+    },
+
     TextInput: {
         borderWidth: 1,
         borderColor: '#ccc',
